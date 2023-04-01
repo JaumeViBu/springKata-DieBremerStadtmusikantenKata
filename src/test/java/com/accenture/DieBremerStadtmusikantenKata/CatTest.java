@@ -1,5 +1,6 @@
 package com.accenture.DieBremerStadtmusikantenKata;
 
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -40,4 +41,29 @@ class CatTest {
         assertEquals("", outContent.toString());
         assertFalse(isSinging);
     }
+
+    @Test
+    void catsCanStartAndStopSinging(){
+        //given
+        Cat testingCat=new Cat("testing cat","miau~~");
+        //when
+        Boolean isSingingBeforeStart=testingCat.isSinging();
+        testingCat.startSinging();
+        Boolean isSingingAfterStart=testingCat.isSinging();
+        testingCat.stopSinging();
+        Boolean isSingingAfterStop=testingCat.isSinging();
+        //then
+        assertEquals("miau~~"+System.lineSeparator(), outContent.toString());
+        assertFalse(isSingingBeforeStart);
+        assertTrue(isSingingAfterStart);
+        assertFalse(isSingingAfterStop);
+
+    }
+
+    @AfterAll
+    static void cleanUp(){
+        System.setOut(System.out);
+    }
+
+
 }

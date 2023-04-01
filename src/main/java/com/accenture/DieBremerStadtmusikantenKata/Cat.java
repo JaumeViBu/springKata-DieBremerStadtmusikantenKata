@@ -22,4 +22,10 @@ public class Cat {
     public Boolean isSinging() {
         return this.singing;
     }
+
+    public void startSinging() {
+    }
+
+    public void stopSinging() {
+    }
 }
