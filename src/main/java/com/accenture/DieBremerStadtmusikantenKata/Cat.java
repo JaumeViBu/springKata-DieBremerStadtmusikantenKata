@@ -24,8 +24,11 @@ public class Cat {
     }
 
     public void startSinging() {
+        System.out.println(this.sound);
+        this.singing=true;
     }
 
     public void stopSinging() {
+        this.singing=false;
     }
 }

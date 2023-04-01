@@ -57,7 +57,6 @@ class CatTest {
         assertFalse(isSingingBeforeStart);
         assertTrue(isSingingAfterStart);
         assertFalse(isSingingAfterStop);
-
     }
 
     @AfterAll
