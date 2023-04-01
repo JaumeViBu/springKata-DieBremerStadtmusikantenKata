@@ -4,6 +4,7 @@ public class Cat {
 
     private String name;
     private String sound;
+    private Boolean singing=false;
 
     public Cat(String name, String sound) {
         this.name = name;
@@ -16,5 +17,9 @@ public class Cat {
 
     public String getSound() {
         return this.sound;
+    }
+
+    public Boolean isSinging() {
+        return this.singing;
     }
 }

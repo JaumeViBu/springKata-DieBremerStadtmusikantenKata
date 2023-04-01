@@ -35,7 +35,7 @@ class CatTest {
         //given
         Cat testingCat=new Cat("testing cat","miau~~");
         //when
-        Boolean isSinging=testingCat.isSinging());
+        Boolean isSinging=testingCat.isSinging();
         //then
         assertEquals("", outContent.toString());
         assertFalse(isSinging);
