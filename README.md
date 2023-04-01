@@ -1,6 +1,6 @@
 ## Sprint 01
 
-- [ ] Los gatos y gatas (Cat) deben iniciar con un nombre y un sonido con el que suelen cantar.
+- [x] Los gatos y gatas (Cat) deben iniciar con un nombre y un sonido con el que suelen cantar.
 - [ ] Al inicio los gatos no cantan.
 - [ ] Podemos indicarle a cualquier Cat que empiece a cantar y también que deje de cantar.
 - [ ] Cat nos indicará cuando canta con una función devolviendo “El gato {nombre} esta cantando {sonido}” y cuando no canta nos indicará “el gato {nombre} no quiere cantar”.

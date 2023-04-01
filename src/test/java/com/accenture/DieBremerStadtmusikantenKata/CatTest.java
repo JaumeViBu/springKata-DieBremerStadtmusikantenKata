@@ -3,12 +3,19 @@ package com.accenture.DieBremerStadtmusikantenKata;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class CatTest {
 
+    ByteArrayOutputStream outContent;
+
     @BeforeEach
     void setUp() {
+        outContent = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outContent));
     }
 
     @Test
@@ -21,5 +28,16 @@ class CatTest {
         //then
         assertEquals("testing cat", name);
         assertEquals("miau~~", sound);
+    }
+
+    @Test
+    void catsDoNotSingFromTheStart(){
+        //given
+        Cat testingCat=new Cat("testing cat","miau~~");
+        //when
+        Boolean isSinging=testingCat.isSinging());
+        //then
+        assertEquals("", outContent.toString());
+        assertFalse(isSinging);
     }
 }
