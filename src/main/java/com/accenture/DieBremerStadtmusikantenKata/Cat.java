@@ -24,7 +24,11 @@ public class Cat {
     }
 
     public void startSinging() {
-        System.out.println(this.sound);
+        StringBuilder msg=new StringBuilder("El gato ");
+        msg.append(this.name);
+        msg.append(" esta cantando ");
+        msg.append(this.sound);
+        System.out.println(msg.toString());
         this.singing=true;
     }
 

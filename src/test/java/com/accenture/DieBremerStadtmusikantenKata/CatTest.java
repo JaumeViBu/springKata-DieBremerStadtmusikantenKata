@@ -59,6 +59,20 @@ class CatTest {
         assertFalse(isSingingAfterStop);
     }
 
+    @Test
+    void catsMustTellUsWhenTheySing(){
+        //given
+        Cat testingCat=new Cat("testing cat","miau~~");
+        //when
+        testingCat.startSinging();
+        String consoleContentAfterStart=outContent.toString();
+        testingCat.stopSinging();
+        String consoleContentAfterStop=outContent.toString();
+        //then
+        assertEquals("El gato testing cat esta cantando miau~~"+System.lineSeparator(), consoleContentAfterStart);
+        assertEquals("El gato testing cat no quiere cantar"+System.lineSeparator(), consoleContentAfterStop);
+    }
+
     @AfterAll
     static void cleanUp(){
         System.setOut(System.out);
