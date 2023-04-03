@@ -53,7 +53,7 @@ class CatTest {
         testingCat.stopSinging();
         Boolean isSingingAfterStop=testingCat.isSinging();
         //then
-        assertEquals("miau~~"+System.lineSeparator(), outContent.toString());
+        assertEquals("El gato testing cat esta cantando miau~~"+System.lineSeparator()+"El gato testing cat no quiere cantar"+System.lineSeparator(), outContent.toString());
         assertFalse(isSingingBeforeStart);
         assertTrue(isSingingAfterStart);
         assertFalse(isSingingAfterStop);
@@ -65,12 +65,14 @@ class CatTest {
         Cat testingCat=new Cat("testing cat","miau~~");
         //when
         testingCat.startSinging();
-        String consoleContentAfterStart=outContent.toString();
+        String[] lines = outContent.toString().split(System.lineSeparator());
+        String consoleContentAfterStart=lines[lines.length - 1];
         testingCat.stopSinging();
-        String consoleContentAfterStop=outContent.toString();
+        lines = outContent.toString().split(System.lineSeparator());
+        String consoleContentAfterStop=lines[lines.length - 1];
         //then
-        assertEquals("El gato testing cat esta cantando miau~~"+System.lineSeparator(), consoleContentAfterStart);
-        assertEquals("El gato testing cat no quiere cantar"+System.lineSeparator(), consoleContentAfterStop);
+        assertEquals("El gato testing cat esta cantando miau~~", consoleContentAfterStart);
+        assertEquals("El gato testing cat no quiere cantar", consoleContentAfterStop);
     }
 
     @AfterAll

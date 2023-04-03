@@ -33,6 +33,10 @@ public class Cat {
     }
 
     public void stopSinging() {
+        StringBuilder msg=new StringBuilder("El gato ");
+        msg.append(this.name);
+        msg.append(" no quiere cantar");
+        System.out.println(msg.toString());
         this.singing=false;
     }
 }
