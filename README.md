@@ -3,11 +3,11 @@
 - [x] Los gatos y gatas (Cat) deben iniciar con un nombre y un sonido con el que suelen cantar.
 - [x] Al inicio los gatos no cantan.
 - [x] Podemos indicarle a cualquier Cat que empiece a cantar y también que deje de cantar.
-- [ ] Cat nos indicará cuando canta con una función devolviendo “El gato {nombre} esta cantando {sonido}” y cuando no canta nos indicará “el gato {nombre} no quiere cantar”.
+- [x] Cat nos indicará cuando canta con una función devolviendo “El gato {nombre} esta cantando {sonido}” y cuando no canta nos indicará “el gato {nombre} no quiere cantar”.
 
 ## Sprint 02
 
-- [ ] El asno y todos los animales pueden hacer lo mismo que el gato pero sus mensajes son “El asno {nombre} esta cantando {sonido} ” y cuando no canta nos indicará: “el asno {nombre} no quiere cantar”.
+- [x] El asno y todos los animales pueden hacer lo mismo que el gato pero sus mensajes son “El asno {nombre} esta cantando {sonido} ” y cuando no canta nos indicará: “el asno {nombre} no quiere cantar”.
 
 ## Sprint 03
 
